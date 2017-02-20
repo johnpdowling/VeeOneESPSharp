@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{20D6A134-13B7-4260-9C07-6078CF66E597}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>VeeOne</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)MyClass.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ESP\PacketQueue.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ESP\ValentineClient.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ESP\ValentineESP.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ESP\Constants\Devices.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ESP\Constants\DevicesLookup.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ESP\Constants\ESPLibraryLogController.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ESP\Constants\PacketId.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ESP\Constants\PacketIdLookup.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ESP\Constants\Status.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ESP\Data\AlertData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ESP\Data\AlertIndexAndCount.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ESP\Data\AuxiliaryData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ESP\Data\BandAndArrowIndicatorData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ESP\Data\BogeyCounterData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ESP\Data\InfDisplayInfoData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ESP\Data\ModeData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ESP\Data\SavvyStatus.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ESP\Data\SignalStrengthData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ESP\Data\SweepDefinition.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ESP\Data\SweepDefinitionIndex.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ESP\Data\SweepSection.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ESP\Data\SweepWriteResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ESP\Data\UserSettings.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ESP\Demo\DemoData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ESP\Factories\PacketFactory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ESP\Packets\ESPPacket.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ESP\Packets\InfDisplayData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ESP\Packets\InfV1Busy.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ESP\Packets\UnknownPacket.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ESP\Statemachines\GetAlertData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ESP\Statemachines\GetAllSweeps.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ESP\Statemachines\WriteCustomSweeps.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ESP\Utilities\Range.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ESP\Utilities\Utilities.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ESP\Utilities\V1VersionSettingLookup.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ESP\Packets\Request\RequestAllSweepDefinitions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ESP\Packets\Request\RequestBatteryVoltage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ESP\Packets\Request\RequestChangeMode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ESP\Packets\Request\RequestDefaultSweepDefinitions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ESP\Packets\Request\RequestFactoryDefault.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ESP\Packets\Request\RequestMaxSweepIndex.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ESP\Packets\Request\RequestMuteOff.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ESP\Packets\Request\RequestMuteOn.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ESP\Packets\Request\RequestOverrideThumbwheel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ESP\Packets\Request\RequestSavvyStatus.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ESP\Packets\Request\RequestSerialNumber.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ESP\Packets\Request\RequestSetSavvyUnmute.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ESP\Packets\Request\RequestSetSweepsToDefault.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ESP\Packets\Request\RequestStartAlertData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ESP\Packets\Request\RequestStopAlertData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ESP\Packets\Request\RequestSweepSections.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ESP\Packets\Request\RequestTurnOffMainDisplay.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ESP\Packets\Request\RequestTurnOnMainDisplay.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ESP\Packets\Request\RequestUserBytes.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ESP\Packets\Request\RequestVehicleSpeed.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ESP\Packets\Request\RequestVersion.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ESP\Packets\Request\RequestWriteSweepDefinition.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ESP\Packets\Request\RequestWriteUserBytes.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ESP\Packets\Response\ResponseAlertData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ESP\Packets\Response\ResponseBatteryVoltage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ESP\Packets\Response\ResponseDataError.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ESP\Packets\Response\ResponseDataReceived.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ESP\Packets\Response\ResponseDefaultSweepDefinitions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ESP\Packets\Response\ResponseMaxSweepIndex.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ESP\Packets\Response\ResponseRequestNotProcessed.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ESP\Packets\Response\ResponseSavvyStatus.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ESP\Packets\Response\ResponseSerialNumber.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ESP\Packets\Response\ResponseSweepDefinitions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ESP\Packets\Response\ResponseSweepSections.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ESP\Packets\Response\ResponseSweepWriteResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ESP\Packets\Response\ResponseUnsupported.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ESP\Packets\Response\ResponseUserBytes.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ESP\Packets\Response\ResponseVehicleSpeed.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ESP\Packets\Response\ResponseVersion.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)ESP\" />
+    <Folder Include="$(MSBuildThisFileDirectory)ESP\Constants\" />
+    <Folder Include="$(MSBuildThisFileDirectory)ESP\Data\" />
+    <Folder Include="$(MSBuildThisFileDirectory)ESP\Demo\" />
+    <Folder Include="$(MSBuildThisFileDirectory)ESP\Factories\" />
+    <Folder Include="$(MSBuildThisFileDirectory)ESP\Packets\" />
+    <Folder Include="$(MSBuildThisFileDirectory)ESP\Statemachines\" />
+    <Folder Include="$(MSBuildThisFileDirectory)ESP\Utilities\" />
+    <Folder Include="$(MSBuildThisFileDirectory)ESP\Packets\Request\" />
+    <Folder Include="$(MSBuildThisFileDirectory)ESP\Packets\Response\" />
+  </ItemGroup>
+</Project>
