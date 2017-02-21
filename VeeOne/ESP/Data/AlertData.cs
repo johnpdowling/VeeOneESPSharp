@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace VeeOne.Data
+namespace VeeOne.ESP.Data
 {
 	public class AlertData
 	{

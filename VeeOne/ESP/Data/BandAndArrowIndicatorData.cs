@@ -1,5 +1,5 @@
-﻿using System;
-namespace VeeOne.Data
+using System;
+namespace VeeOne.ESP.Data
 {
 	public class BandAndArrowIndicatorData
 	{

@@ -1,8 +1,8 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using VeeOne.Data;
+using VeeOne.ESP.Data;
 
-namespace VeeOne.Utilities
+namespace VeeOne.ESP.Utilities
 {
 	public class V1VersionSettingLookup
 	{

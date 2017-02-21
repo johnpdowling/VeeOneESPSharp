@@ -1,7 +1,7 @@
-﻿using System;
+using System;
 using System.IO;
 
-namespace VeeOne.Data
+namespace VeeOne.ESP.Data
 {
 	public class SweepDefinition
 	{

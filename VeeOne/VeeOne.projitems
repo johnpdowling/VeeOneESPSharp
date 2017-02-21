@@ -85,6 +85,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)ESP\Packets\Response\ResponseVehicleSpeed.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ESP\Packets\Response\ResponseVersion.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ESP\Data\BandArrowData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ESP\Bluetooth\ConnectionType.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)ESP\" />
@@ -97,5 +98,6 @@
     <Folder Include="$(MSBuildThisFileDirectory)ESP\Utilities\" />
     <Folder Include="$(MSBuildThisFileDirectory)ESP\Packets\Request\" />
     <Folder Include="$(MSBuildThisFileDirectory)ESP\Packets\Response\" />
+    <Folder Include="$(MSBuildThisFileDirectory)ESP\Bluetooth\" />
   </ItemGroup>
 </Project>

@@ -1,8 +1,8 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace VeeOne.Constants
+namespace VeeOne.ESP.Constants
 {
 	public class Devices
 	{

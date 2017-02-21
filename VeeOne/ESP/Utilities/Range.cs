@@ -1,5 +1,5 @@
-﻿using System;
-namespace VeeOne.Utilities
+using System;
+namespace VeeOne.ESP.Utilities
 {
 	public class Range
 	{

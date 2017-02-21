@@ -1,8 +1,8 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using VeeOne.Utilities;
+using VeeOne.ESP.Utilities;
 
-namespace VeeOne.Data
+namespace VeeOne.ESP.Data
 {
 	public class UserSettings
 	{

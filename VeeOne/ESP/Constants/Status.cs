@@ -1,5 +1,5 @@
-﻿using System;
-namespace VeeOne.Constants
+using System;
+namespace VeeOne.ESP.Constants
 {
 	public enum Status
 	{
