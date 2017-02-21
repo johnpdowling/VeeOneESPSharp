@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
-namespace VeeOne
+namespace VeeOne.Constants
 {
 	public class PacketIdLookup
 	{

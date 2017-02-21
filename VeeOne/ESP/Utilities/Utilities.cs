@@ -1,5 +1,5 @@
 ﻿using System;
-namespace VeeOne
+namespace VeeOne.Utilities
 {
 	public class Utilities
 	{

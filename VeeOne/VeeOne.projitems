@@ -84,6 +84,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)ESP\Packets\Response\ResponseUserBytes.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ESP\Packets\Response\ResponseVehicleSpeed.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ESP\Packets\Response\ResponseVersion.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ESP\Data\BandArrowData.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)ESP\" />

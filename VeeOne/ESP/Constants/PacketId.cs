@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace VeeOne
+namespace VeeOne.Constants
 {
 	public class PacketId
 	{

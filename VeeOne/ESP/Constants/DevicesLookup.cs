@@ -54,5 +54,4 @@ namespace VeeOne.Constants
 			}
 		}
 	}
-	}
 }
