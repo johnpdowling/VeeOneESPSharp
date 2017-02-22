@@ -27,7 +27,7 @@ namespace VeeOne.ESP.Data
 			}
 		}
 
-		public int UpperFrequencyEdgeInt
+		public int UpperFrequencyEdgeInteger
 		{
 			get
 			{
@@ -39,7 +39,7 @@ namespace VeeOne.ESP.Data
 			}
 		}
 
-		public int LowerFrequencyEdgeInt
+		public int LowerFrequencyEdgeInteger
 		{
 			get
 			{

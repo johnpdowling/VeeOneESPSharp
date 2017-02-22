@@ -1,6 +1,8 @@
 ﻿using System;
 using VeeOne.ESP.Constants;
 using VeeOne.ESP.Packets;
+using VeeOne.ESP.Packets.Request;
+using VeeOne.ESP.Packets.Response;
 
 namespace VeeOne.ESP.Factories
 {

@@ -1172,7 +1172,7 @@ namespace VeeOne.ESP.Packets
 			}
 		}
 
-		protected void buildPacket()
+		protected virtual void buildPacket()
 		{
 			headerDelimter = (byte)frameDelimitedConstant;
 
