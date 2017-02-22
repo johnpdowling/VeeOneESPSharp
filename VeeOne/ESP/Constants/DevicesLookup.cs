@@ -46,7 +46,7 @@ namespace VeeOne.ESP.Constants
 	 	*/
 		private static void setUpValues()
 		{
-			Devices[] array = Devices.Values.Cast<Devices>().ToArray();
+			Devices[] array = (Devices[])Enum.GetValues(typeof(Devices));
 
 			for (int i = 0; i < array.Length; i++)
 			{

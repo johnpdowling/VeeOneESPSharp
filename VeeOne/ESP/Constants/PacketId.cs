@@ -1,123 +1,121 @@
 using System;
 using System.Collections.Generic;
+using System.Reflection;
 
 namespace VeeOne.ESP.Constants
 {
-	public class PacketId
+	public enum PacketId
 	{
-		public static readonly PacketId reqVersion = new PacketId(0x01, "reqVersion");
-		public static readonly PacketId respVersion = new PacketId(0x02, "respVersion");
-		public static readonly PacketId reqSerialNumber = new PacketId(0x03, "reqSerialNumber");
-		public static readonly PacketId respSerialNumber = new PacketId(0x04, "respSerialNumber");
-		public static readonly PacketId reqUserBytes = new PacketId(0x11, "reqUserBytes");
-		public static readonly PacketId respUserBytes = new PacketId(0x12, "respUserBytes");
-		public static readonly PacketId reqWriteUserBytes = new PacketId(0x13, "reqWriteUserBytes");
-		public static readonly PacketId reqFactoryDefault = new PacketId(0x14, "reqFactoryDefault");
-		public static readonly PacketId reqWriteSweepDefinition = new PacketId(0x15, "reqWriteSweepDefinition");
-		public static readonly PacketId reqAllSweepDefinitions = new PacketId(0x16, "reqAllSweepDefinitions");
-		public static readonly PacketId respSweepDefinition = new PacketId(0x17, "respSweepDefinition");
-		public static readonly PacketId reqSetSweepsToDefault = new PacketId(0x18, "reqSetSweepsToDefault");
-		public static readonly PacketId reqMaxSweepIndex = new PacketId(0x19, "reqMaxSweepIndex");
-		public static readonly PacketId respMaxSweepIndex = new PacketId(0x20, "respMaxSweepIndex");
-		public static readonly PacketId respSweepWriteResult = new PacketId(0x21, "respSweepWriteResult");
-		public static readonly PacketId reqSweepSections = new PacketId(0x22, "reqSweepSections");
-		public static readonly PacketId respSweepSections = new PacketId(0x23, "respSweepSections");
-		public static readonly PacketId reqDefaultSweepDefinitions = new PacketId(0x24, "reqDefaultSweepDefinitions");
-		public static readonly PacketId respDefaultSweepDefinition = new PacketId(0x25, "respDefaultSweepDefinition");
-		public static readonly PacketId infDisplayData = new PacketId(0x31, "infDisplayData");
-		public static readonly PacketId reqTurnOffMainDisplay = new PacketId(0x32, "reqTurnOffMainDisplay");
-		public static readonly PacketId reqTurnOnMainDisplay = new PacketId(0x33, "reqTurnOnMainDisplay");
-		public static readonly PacketId reqMuteOn = new PacketId(0x34, "reqMuteOn");
-		public static readonly PacketId reqMuteOff = new PacketId(0x35, "reqMuteOff");
-		public static readonly PacketId reqChangeMode = new PacketId(0x36, "reqChangeMode");
-		public static readonly PacketId reqStartAlertData = new PacketId(0x41, "reqStartAlertData");
-		public static readonly PacketId reqStopAlertData = new PacketId(0x42, "reqStopAlertData");
-		public static readonly PacketId respAlertData = new PacketId(0x43, "respAlertData");
-		public static readonly PacketId respDataReceived = new PacketId(0x61, "respDataReceived");
-		public static readonly PacketId reqBatteryVoltage = new PacketId(0x62, "reqBatteryVoltage");
-		public static readonly PacketId respBatteryVoltage = new PacketId(0x63, "respBatteryVoltage");
-		public static readonly PacketId respUnsupportedPacket = new PacketId(0x64, "respUnsupportedPacket");
-		public static readonly PacketId respRequestNotProcessed = new PacketId(0x65, "respRequestNotProcessed");
-		public static readonly PacketId infV1Busy = new PacketId(0x66, "infV1Busy");
-		public static readonly PacketId respDataError = new PacketId(0x67, "respDataError");
-		public static readonly PacketId reqSavvyStatus = new PacketId(0x71, "reqSavvyStatus");
-		public static readonly PacketId respSavvyStatus = new PacketId(0x72, "respSavvyStatus");
-		public static readonly PacketId reqVehicleSpeed = new PacketId(0x73, "reqVehicleSpeed");
-		public static readonly PacketId respVehicleSpeed = new PacketId(0x74, "respVehicleSpeed");
-		public static readonly PacketId reqOverrideThumbwheel = new PacketId(0x75, "reqOverrideThumbwheel");
-		public static readonly PacketId reqSetSavvyUnmuteEnable = new PacketId(0x76, "reqSetSavvyUnmuteEnable");
+		[ValueNameAttr(0x01, "reqVersion")]
+		reqVersion,
+		[ValueNameAttr(0x02, "respVersion")]
+		respVersion,
+		[ValueNameAttr(0x03, "reqSerialNumber")]
+		reqSerialNumber,
+		[ValueNameAttr(0x04, "respSerialNumber")]
+		respSerialNumber,
+		[ValueNameAttr(0x11, "reqUserBytes")]
+		reqUserBytes,
+		[ValueNameAttr(0x12, "respUserBytes")]
+		respUserBytes,
+		[ValueNameAttr(0x13, "reqWriteUserBytes")]
+		reqWriteUserBytes,
+		[ValueNameAttr(0x14, "reqFactoryDefault")]
+		reqFactoryDefault,
+		[ValueNameAttr(0x15, "reqWriteSweepDefinition")]
+		reqWriteSweepDefinition,
+		[ValueNameAttr(0x16, "reqAllSweepDefinitions")]
+		reqAllSweepDefinitions,
+		[ValueNameAttr(0x17, "respSweepDefinition")]
+		respSweepDefinition,
+		[ValueNameAttr(0x18, "reqSetSweepsToDefault")]
+		reqSetSweepsToDefault,
+		[ValueNameAttr(0x19, "reqMaxSweepIndex")]
+		reqMaxSweepIndex,
+		[ValueNameAttr(0x20, "respMaxSweepIndex")]
+		respMaxSweepIndex,
+		[ValueNameAttr(0x21, "respSweepWriteResult")]
+		respSweepWriteResult,
+		[ValueNameAttr(0x22, "reqSweepSections")]
+		reqSweepSections,
+		[ValueNameAttr(0x23, "respSweepSections")]
+		respSweepSections,
+		[ValueNameAttr(0x24, "reqDefaultSweepDefinitions")]
+		reqDefaultSweepDefinitions,
+		[ValueNameAttr(0x25, "respDefaultSweepDefinition")]
+		respDefaultSweepDefinition,
+		[ValueNameAttr(0x31, "infDisplayData")]
+		infDisplayData,
+		[ValueNameAttr(0x32, "reqTurnOffMainDisplay")]
+		reqTurnOffMainDisplay,
+		[ValueNameAttr(0x33, "reqTurnOnMainDisplay")]
+		reqTurnOnMainDisplay,
+		[ValueNameAttr(0x34, "reqMuteOn")]
+		reqMuteOn,
+		[ValueNameAttr(0x35, "reqMuteOff")]
+		reqMuteOff,
+		[ValueNameAttr(0x36, "reqChangeMode")]
+		reqChangeMode,
+		[ValueNameAttr(0x41, "reqStartAlertData")]
+		reqStartAlertData,
+		[ValueNameAttr(0x42, "reqStopAlertData")]
+		reqStopAlertData,
+		[ValueNameAttr(0x43, "respAlertData")]
+		respAlertData,
+		[ValueNameAttr(0x61, "respDataReceived")]
+		respDataReceived,
+		[ValueNameAttr(0x62, "reqBatteryVoltage")]
+		reqBatteryVoltage,
+		[ValueNameAttr(0x63, "respBatteryVoltage")]
+		respBatteryVoltage,
+		[ValueNameAttr(0x64, "respUnsupportedPacket")]
+		respUnsupportedPacket,
+		[ValueNameAttr(0x65, "respRequestNotProcessed")]
+		respRequestNotProcessed,
+		[ValueNameAttr(0x66, "infV1Busy")]
+		infV1Busy,
+		[ValueNameAttr(0x67, "respDataError")]
+		respDataError,
+		[ValueNameAttr(0x71, "reqSavvyStatus")]
+		reqSavvyStatus,
+		[ValueNameAttr(0x72, "respSavvyStatus")]
+		respSavvyStatus,
+		[ValueNameAttr(0x73, "reqVehicleSpeed")]
+		reqVehicleSpeed,
+		[ValueNameAttr(0x74, "respVehicleSpeed")]
+		respVehicleSpeed,
+		[ValueNameAttr(0x75, "reqOverrideThumbwheel")]
+		reqOverrideThumbwheel,
+		[ValueNameAttr(0x76, "reqSetSavvyUnmuteEnable")]
+		reqSetSavvyUnmuteEnable,
 
-		public static readonly PacketId unknownPacketType = new PacketId(0xFF, "UnknownPacketType");
+		[ValueNameAttr(0xFF, "UnknownPacketType")]
+		unknownPacketType 
+	}
 
-
-		public static IEnumerable<PacketId> Values
+	public static class PacketIdExtensions
+	{
+		public static byte ToByteValue(this PacketId p)
 		{
-			get
-			{
-				yield return reqVersion;
-				yield return respVersion;
-				yield return reqSerialNumber;
-				yield return respSerialNumber;
-				yield return reqUserBytes;
-				yield return respUserBytes;
-				yield return reqWriteUserBytes;
-				yield return reqFactoryDefault;
-				yield return reqWriteSweepDefinition;
-				yield return reqAllSweepDefinitions;
-				yield return respSweepDefinition;
-				yield return reqSetSweepsToDefault;
-				yield return reqMaxSweepIndex;
-				yield return respMaxSweepIndex;
-				yield return respSweepWriteResult;
-				yield return reqSweepSections;
-				yield return respSweepSections;
-				yield return reqDefaultSweepDefinitions;
-				yield return respDefaultSweepDefinition;
-				yield return infDisplayData;
-				yield return reqTurnOffMainDisplay;
-				yield return reqTurnOnMainDisplay;
-				yield return reqMuteOn;
-				yield return reqMuteOff;
-				yield return reqChangeMode;
-				yield return reqStartAlertData;
-				yield return reqStopAlertData;
-				yield return respAlertData;
-				yield return respDataReceived;
-				yield return reqBatteryVoltage;
-				yield return respBatteryVoltage;
-				yield return respUnsupportedPacket;
-				yield return respRequestNotProcessed;
-				yield return infV1Busy;
-				yield return respDataError;
-				yield return reqSavvyStatus;
-				yield return respSavvyStatus;
-				yield return reqVehicleSpeed;
-				yield return respVehicleSpeed;
-				yield return reqOverrideThumbwheel;
-				yield return reqSetSavvyUnmuteEnable;
-
-				yield return unknownPacketType;
-			}
+			ValueNameAttr attr = GetAttr(p);
+			return attr.Value;
 		}
 
-
-		byte m_value;
-		String m_name;
-
-		PacketId(byte _value, String _name)
+		public static string ToString(this PacketId p)
 		{
-			m_value = _value;
-			m_name = _name;
+			ValueNameAttr attr = GetAttr(p);
+			return attr.Name;
 		}
 
-		public byte ToByteValue()
+		private static ValueNameAttr GetAttr(PacketId p)
 		{
-			return m_value;
+			return (ValueNameAttr)Attribute.GetCustomAttribute(ForValue(p), typeof(ValueNameAttr));
 		}
 
-		public override String ToString()
+		private static MemberInfo ForValue(PacketId p)
 		{
-			return m_name;
+			return typeof(PacketId).GetField(Enum.GetName(typeof(PacketId), p));
 		}
+
 	}
 }

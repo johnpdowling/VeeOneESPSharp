@@ -6,43 +6,12 @@ namespace VeeOne.ESP.Data
 {
 	public class AlertData
 	{
-		public class SignalDirection
+		public enum SignalDirection
 		{
-			public static readonly SignalDirection ORIENTATION_FRONT = new SignalDirection(0);
-			public static readonly SignalDirection ORIENTATION_SIDE = new SignalDirection(1);
-			public static readonly SignalDirection ORIENTATION_REAR = new SignalDirection(2);
-			public static readonly SignalDirection ORIENTATION_INVALID = new SignalDirection(3);
-
-			public static IEnumerable<SignalDirection> Values
-			{
-				get
-				{
-					yield return ORIENTATION_FRONT;
-					yield return ORIENTATION_SIDE;
-					yield return ORIENTATION_REAR;
-					yield return ORIENTATION_INVALID;
-				}
-			}
-
-			int index;
-
-			SignalDirection(int index)
-			{
-				this.index = index;
-			}
-
-			public int Value
-			{
-				get
-				{
-					return index;
-				}
-			}
-
-			public static SignalDirection EnumForPos(int pos)
-			{
-				return Values.ElementAt(pos);
-			}
+			ORIENTATION_FRONT 	= 0,
+			ORIENTATION_SIDE  	= 1,
+			ORIENTATION_REAR  	= 2,
+			ORIENTATION_INVALID = 3
 		}
 
 		private AlertIndexAndCount m_alertIndexAndCount;

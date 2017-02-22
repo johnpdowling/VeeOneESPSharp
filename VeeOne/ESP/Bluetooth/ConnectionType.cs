@@ -1,44 +1,43 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Reflection;
+using VeeOne.ESP.Constants;
 
 namespace VeeOne.ESP.Bluetooth
 {
-	public class ConnectionType
+	public enum ConnectionType
 	{
-		public static readonly ConnectionType UNKNOWN = new ConnectionType(0, "UNKNOWN");
-		public static readonly ConnectionType V1Connection = new ConnectionType(1, "V1Connection");
-		public static readonly ConnectionType V1Connection_LE = new ConnectionType(2, "V1Connection_LE");
+		[ValueNameAttr(0, "UNKNOWN")]
+		UNKNOWN,
+		[ValueNameAttr(1, "V1Connection")]
+		V1Connection,
+		[ValueNameAttr(2, "V1Connection_LE")]
+		V1Connection_LE
+	}
 
-		private readonly int mValue;
-		private readonly String mName;
-
-		public static IEnumerable<ConnectionType> Values
+	public static class ConnectionTypeExtensions
+	{
+		public static byte ToByteValue(this ConnectionType c)
 		{
-			get
-			{
-				yield return UNKNOWN;
-				yield return V1Connection;
-				yield return V1Connection_LE;
-			}
+			ValueNameAttr attr = GetAttr(c);
+			return attr.Value;
 		}
 
-		private ConnectionType(int value, String name)
+		public static string ToString(this ConnectionType c)
 		{
-			this.mValue = value;
-			this.mName = name;
+			ValueNameAttr attr = GetAttr(c);
+			return attr.Name;
 		}
 
-		public override string ToString()
+		private static ValueNameAttr GetAttr(ConnectionType c)
 		{
-			return mName;
+			return (ValueNameAttr)Attribute.GetCustomAttribute(ForValue(c), typeof(ValueNameAttr));
 		}
 
-		public int Value
+		private static MemberInfo ForValue(ConnectionType c)
 		{
-			get
-			{
-				return mValue;
-			}
+			return typeof(ConnectionType).GetField(Enum.GetName(typeof(ConnectionType), c));
 		}
+
 	}
 }

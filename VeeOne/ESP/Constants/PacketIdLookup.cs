@@ -27,7 +27,7 @@ namespace VeeOne.ESP.Constants
 
 		private static void setUpValues()
 		{
-			PacketId[] array = PacketId.Values.Cast<PacketId>().ToArray();
+			PacketId[] array = (PacketId[])Enum.GetValues(typeof(PacketId));// PacketId.Values.Cast<PacketId>().ToArray();
 
 			for (int i = 0; i < array.Length; i++)
 			{

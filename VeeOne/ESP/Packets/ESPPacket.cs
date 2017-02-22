@@ -5,7 +5,6 @@ using VeeOne.ESP.Bluetooth;
 using VeeOne.ESP.Constants;
 using VeeOne.ESP.Factories;
 
-
 namespace VeeOne.ESP.Packets
 {
 	public abstract class ESPPacket
@@ -307,7 +306,7 @@ namespace VeeOne.ESP.Packets
 							// If the packet is from a V1 set the ESPPacket V1 type to the appropriate Device type. 
 							if (IsPacketFromV1(retPacket.originatorIdentifier))
 							{
-								retPacket.m_valentineType = Devices.FromByteValue(retPacket.originatorIdentifier);
+								retPacket.m_valentineType = DevicesUtils.DevicesFromByteValue(retPacket.originatorIdentifier);
 							}
 							else {
 								retPacket.m_valentineType = lastV1Type;
@@ -663,7 +662,7 @@ namespace VeeOne.ESP.Packets
 							// If the packet is from a V1 set the ESPPacket V1 type to the appropriate Device type. 
 							if (IsPacketFromV1(retPacket.originatorIdentifier))
 							{
-								retPacket.m_valentineType = Devices.FromByteValue(retPacket.originatorIdentifier);
+								retPacket.m_valentineType = DevicesUtils.DevicesFromByteValue(retPacket.originatorIdentifier);
 							}
 							else {
 								retPacket.m_valentineType = lastV1Type;
