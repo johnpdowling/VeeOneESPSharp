@@ -86,6 +86,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)ESP\Packets\Response\ResponseVersion.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ESP\Data\BandArrowData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ESP\Bluetooth\ConnectionType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ESP\Bluetooth\IVR_BluetoothWrapper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ESP\Bluetooth\VR_BluetoothWrapper.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)ESP\" />
